@@ -37,7 +37,7 @@ app.add_middleware(
 
 @app.get("/answer")
 def answer(question: str):
-    return answer_question(df,question=question,debug=False)
+    return {"answer":answer_question(df,question=question,debug=False)}
 
 # print(answer("Can we start a policy without visiting the office"))
 
